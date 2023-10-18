@@ -1,6 +1,6 @@
 class Btn {
   static const String del = "Del";
-  static const String clr = "C";
+  static const String clr = "AC";
   static const String percent = "%";
   static const String multiply = "x";
   static const String divide = "/";
