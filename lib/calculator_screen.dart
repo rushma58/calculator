@@ -225,7 +225,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   Color getBtnColor(value) => [Btn.del, Btn.clr].contains(value)
-      ? Colors.lightBlueAccent
+      ? const Color.fromARGB(255, 168, 227, 255)
       : [
           Btn.add,
           Btn.subtract,
@@ -234,6 +234,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           Btn.percent,
           Btn.calculate
         ].contains(value)
-          ? Colors.orangeAccent
-          : Colors.grey;
+          ? const Color.fromARGB(255, 253, 160, 191)
+          : const Color.fromARGB(179, 210, 206, 206);
 }
