@@ -44,18 +44,21 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             ),
 
             //buttons
-            Wrap(
-              children: Btn.buttonValues
-                  .map(
-                    (value) => SizedBox(
-                      width: value == Btn.n0
-                          ? screenSize.width / 2
-                          : (screenSize.width / 4),
-                      height: screenSize.width / 5,
-                      child: buildButton(value),
-                    ),
-                  )
-                  .toList(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Wrap(
+                children: Btn.buttonValues
+                    .map(
+                      (value) => SizedBox(
+                        width: value == Btn.n0
+                            ? screenSize.width / 2
+                            : (screenSize.width / 4),
+                        height: screenSize.width / 5,
+                        child: buildButton(value),
+                      ),
+                    )
+                    .toList(),
+              ),
             ),
           ],
         ),
@@ -78,7 +81,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           child: Center(
             child: Text(
               value,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
           ),
         ),
@@ -225,7 +228,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   Color getBtnColor(value) => [Btn.del, Btn.clr].contains(value)
-      ? const Color.fromARGB(255, 168, 227, 255)
+      ? Color.fromARGB(255, 186, 223, 241)
       : [
           Btn.add,
           Btn.subtract,
@@ -234,6 +237,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           Btn.percent,
           Btn.calculate
         ].contains(value)
-          ? const Color.fromARGB(255, 253, 160, 191)
-          : const Color.fromARGB(179, 210, 206, 206);
+          ? Color.fromARGB(255, 246, 182, 203)
+          : Color.fromARGB(179, 228, 227, 227);
 }
